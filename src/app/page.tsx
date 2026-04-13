@@ -1,18 +1,16 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Button  } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+import { prisma } from "@/lib/prisma";
 
-export default function Home() {
+export default async function Home() {
+
+  const users = await prisma?.user.findMany()
   const something = true;
   return (
     <>
     <div className={cn( "text-red-400")}>
       home is here
-      <Button>
-        click me
-      </Button>
-      
+      {JSON.stringify(users)}
     </div>
     </>
   )
