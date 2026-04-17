@@ -9,7 +9,7 @@ export const AuthLayout = ({ children }: { children: React.ReactNode; }) => {
           <Image src="/logos/logo.svg" alt="Kontrol" width={30} height={30} />
           Kontrol
         </Link>
-        {children}
+        {children} 
       </div>
     </div>
   );
